@@ -83,7 +83,7 @@
                             </Border>
                         </UniformGrid>
                         <DataGrid Grid.Row="1" Margin="10">
-                            
+                            <DataGrid.Columns></DataGrid.Columns>
                         </DataGrid>
                     </Grid>
                 </Border>
