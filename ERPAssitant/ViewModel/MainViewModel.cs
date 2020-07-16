@@ -1,4 +1,5 @@
 using ERPAssitant.Model;
+using ERPAssitant.Service;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System;
@@ -36,17 +37,8 @@ namespace ERPAssitant.ViewModel
             ////}
             ChangePageCommand = new RelayCommand(ChangePage);
             mainModel = new MainModel() ;
-        }
-        private string frameSources;
-
-        public string FrameSources
-        {
-            get { return frameSources; }
-            set
-            {
-                frameSources = value;
-                RaisePropertyChanged(nameof(FrameSources));
-            }
+            string filePath = @"D:\仓库物料总表.xlsx";
+            NPOIService.ExcelToDataTable(filePath);
         }
 
         private void ChangePage()
